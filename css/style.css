@@ -1,5 +1,5 @@
 :root {
-  --primary: #b6895b;
+  --primary: #03633e;
   --bg: #010101;
 }
 
@@ -12,11 +12,14 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 5000px;
 }
 
 /* Navbar */
@@ -26,7 +29,7 @@ body {
   align-items: center;
   padding: 1.4rem 7%;
   background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #513c28;
+  border-bottom: 1px solid #05633c;
   position: fixed;
   top: 0;
   left: 0;
@@ -216,7 +219,7 @@ body {
   line-height: 1.6;
 }
 
-.menu row {
+.menu .row {
   display: flex;
   flex-wrap: wrap;
   margin-top: 5rem;
@@ -234,7 +237,7 @@ body {
 }
 
 .menu .row .menu-card .menu-card-title {
-  margin-top: 1rem auto 0.5rem;
+  margin: 1rem auto 0.5rem;
 }
 
 /* Contact Section */
@@ -242,13 +245,85 @@ body {
   display: flex;
   margin-top: 2rem;
   background-color: #222;
-  flex-wrap: wrap;
 }
 
 .contact .row .map {
   flex: 1 1 45rem;
   width: 100%;
   object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer.credit a {
+  color: var(--bg);
+  font-weight: 700;
 }
 
 /* Media Queries */
@@ -324,6 +399,18 @@ body {
 
   .menu p {
     font-size: 1.2rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
   }
 }
 
