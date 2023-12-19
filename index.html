@@ -1,182 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JayaMart</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JayaMart</title>
 
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet" />
 
-    <!-- My Style -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Navbar Start -->
-    <nav class="navbar">
-      <a href="#" class="navbar-logo">Jaya<span>Mart</span></a>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
 
-      <div class="navbar-nav">
-        <a href="#home">Home</a>
-        <a href="#about">Tentang Kami</a>
-        <a href="#menu">Menu</a>
-        <a href="#products">Produk</a>
-        <a href="#contact">Kontak</a>
+  <!-- My Style -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- AlpineJS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- App -->
+  <script src="src/app.js"></script>
+</head>
+
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">Jaya<span>Mart</span></a>
+
+    <div class="navbar-nav">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang Kami</a>
+      <a href="#menu">Promo</a>
+      <a href="#products">Produk</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="navbar-extra">
+      <a href="#" id="search-button"><i data-feather="search"></i></a>
+      <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+
+    <!-- Search Form start -->
+    <div class="search-form">
+      <input type="search" id="search-box" placeholder="search here...">
+      <label for="search-box"><i data-feather="search"></i></label>
+    </div>
+    <!-- Search Form end -->
+
+
+    <!-- Shopping Cart start -->
+    <div class="shopping-cart">
+      <div class="cart-item">
+        <img src="img/products/1.jpg" alt="Senyuman Mas Susilo">
+        <div class="item-detail">
+          <h3>Senyuman Mas Susilo</h3>
+          <div class="item-price">IDR 1000K</div>
+        </div>
+        <i data-feather="trash-2" class="remove-item"></i>
+      </div>
+      <div class="cart-item">
+        <img src="img/products/1.jpg" alt="Senyuman Mas Susilo">
+        <div class="item-detail">
+          <h3>Senyuman Mas Susilo</h3>
+          <div class="item-price">IDR 1000K</div>
+        </div>
+        <i data-feather="trash-2" class="remove-item"></i>
+      </div>
+      <div class="cart-item">
+        <img src="img/products/1.jpg" alt="Senyuman Mas Susilo">
+        <div class="item-detail">
+          <h3>Senyuman Mas Susilo</h3>
+          <div class="item-price">IDR 1000K</div>
+        </div>
+        <i data-feather="trash-2" class="remove-item"></i>
+      </div>
+    </div>
+    <!-- Shopping Cart end -->
+
+
+  </nav>
+
+  <!-- Navbar End -->
+
+  <!-- Hero Section start -->
+  <section class="hero" id="home">
+    <main class="content">
+      <h1>Selamat Datang di Jaya<span>Mart</span></h1>
+      <p>Selamat berbelanja di JayaMart, Universitas Jenderal Achmad Yani</p>
+      <a href="#" class="cta">Beli Sekarang</a>
+    </main>
+  </section>
+  <!-- Hero Section end -->
+
+
+  <!-- About Section Start -->
+  <section id="about" class="about">
+    <h2><span>Tentang</span> Kami</h2>
+    <div class="row">
+      <div class="about-img">
+        <img src="img/tentang2-kami.jpg" alt="Tentang Kami" />
+      </div>
+      <div class="content">
+        <h3>Kenapa memilih JayaMart?</h3>
+        <p>
+          Karena JayaMart adalah supermarket di bawah naungan Universitas
+          Jenderal Achmad Yani Yogyakarta
+        </p>
+        <p>
+          Yang dimana sekaligus dikelola oleh Yayasan Kartika Eka Paksi, untuk
+          memenuhi kebutuhan mahasiswa atau mahasiswi.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- About Section End -->
+
+
+  <!-- Menu Section Start -->
+  <section id="menu" class="menu">
+    <h2>Daftar <span>Promo</span></h2>
+    <h3><span>"Pasti</span> Promo"</h3>
+    <p>Doimu ngga ngasih kepastian?? kok isoooo... JayaMart aja ngasih kepastian di "Pasti Promo" harga murah cocok
+      untuk mahasiswa.</p>
+
+    <div class="row">
+      <div class="menu-card">
+        <img src="img/belanja/1.png" alt="Indomie Chicken Flavour" class="menu-card-img">
+        <h3 class="menu-card-title">- Indomie Chicken Flavour -</h3>
+        <p class="menu-card-price">IDR 3K </p>
       </div>
 
-      <div class="navbar-extra">
-        <a href="#" id="search-button"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
-        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      <div class="menu-card">
+        <img src="img/belanja/3.png" alt="Indomie Goreng" class="menu-card-img">
+        <h3 class="menu-card-title">- Indomie Goreng -</h3>
+        <p class="menu-card-price">IDR 3K </p>
       </div>
 
-      <!-- Search Form start -->
-      <div class="search-form">
-        <input type="search" id="search-box" placeholder="search here...">
-        <label for="search-box"><i data-feather="search"></i></label>
-      </div>
-      <!-- Search Form end -->
-
-
-      <!-- Shopping Cart start -->
-      <div class="shopping-cart">
-        <div class="cart-item">
-          <img src="img/products/1.jpg" alt="Senyuman Mas Susilo">
-          <div class="item-detail">
-            <h3>Senyuman Mas Susilo</h3>
-            <div class="item-price">IDR 1000K</div>
-          </div>
-          <i data-feather="trash-2" class="remove-item"></i>
-        </div>
-        <div class="cart-item">
-          <img src="img/products/1.jpg" alt="Senyuman Mas Susilo">
-          <div class="item-detail">
-            <h3>Senyuman Mas Susilo</h3>
-            <div class="item-price">IDR 1000K</div>
-          </div>
-          <i data-feather="trash-2" class="remove-item"></i>
-        </div>
-        <div class="cart-item">
-          <img src="img/products/1.jpg" alt="Senyuman Mas Susilo">
-          <div class="item-detail">
-            <h3>Senyuman Mas Susilo</h3>
-            <div class="item-price">IDR 1000K</div>
-          </div>
-          <i data-feather="trash-2" class="remove-item"></i>
-        </div>
-      </div>
-      <!-- Shopping Cart end -->
-      
-      
-    </nav>
-
-    <!-- Navbar End -->
-
-    <!-- Hero Section start -->
-    <section class="hero" id="home">
-      <main class="content">
-        <h1>Selamat Datang di Jaya<span>Mart</span></h1>
-        <p>Selamat berbelanja di JayaMart, Universitas Jenderal Achmad Yani</p>
-        <a href="#" class="cta">Beli Sekarang</a>
-      </main>
-    </section>
-    <!-- Hero Section end -->
-
-
-    <!-- About Section Start -->
-    <section id="about" class="about">
-      <h2><span>Tentang</span> Kami</h2>
-      <div class="row">
-        <div class="about-img">
-          <img src="img/tentang2-kami.jpg" alt="Tentang Kami" />
-        </div>
-        <div class="content">
-          <h3>Kenapa memilih JayaMart?</h3>
-          <p>
-            Karena JayaMart adalah supermarket di bawah naungan Universitas
-            Jenderal Achmad Yani Yogyakarta
-          </p>
-          <p>
-            Yang dimana sekaligus dikelola oleh Yayasan Kartika Eka Paksi, untuk
-            memenuhi kebutuhan mahasiswa atau mahasiswi.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- About Section End -->
-
-
-    <!-- Menu Section Start -->
-    <section id="menu" class="menu">
-      <h2><span>Daftar</span> Belanjaan</h2>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid facilis beatae ullam vel, illo optio!</p>
-  
-      <div class="row">
-          <div class="menu-card">
-              <img src="img/belanja/1.png" alt="Indomie Chicken Flavour" class="menu-card-img">
-              <h3 class="menu-card-title">- Indomie Chicken Flavour -</h3>
-              <p class="menu-card-price">IDR 3K </p>
-          </div>
-  
-          <div class="menu-card">
-              <img src="img/belanja/3.png" alt="Indomie Goreng" class="menu-card-img">
-              <h3 class="menu-card-title">- Indomie Goreng -</h3>
-              <p class="menu-card-price">IDR 3K </p>
-          </div>
-  
-          <div class="menu-card">
-            <img src="img/belanja/8.png" alt="Lifebuoy Soap Shower" class="menu-card-img">
-            <h3 class="menu-card-title">- Lifebuoy Soap Shower -</h3>
-            <p class="menu-card-price">IDR 4K </p>
-        </div>
-
-        <div class="menu-card">
-          <img src="img/belanja/4.png" alt="Aqua Galon (New)" class="menu-card-img">
-          <h3 class="menu-card-title">- Aqua Galon (New) -</h3>
-          <p class="menu-card-price">IDR 60K </p>
+      <div class="menu-card">
+        <img src="img/belanja/8.png" alt="Lifebuoy Soap Shower" class="menu-card-img">
+        <h3 class="menu-card-title">- Lifebuoy Soap Shower -</h3>
+        <p class="menu-card-price">IDR 4K </p>
       </div>
 
       <div class="menu-card">
         <img src="img/belanja/4.png" alt="Aqua Galon (New)" class="menu-card-img">
         <h3 class="menu-card-title">- Aqua Galon (New) -</h3>
         <p class="menu-card-price">IDR 60K </p>
-    </div>
-
-    <div class="menu-card">
-      <img src="img/belanja/9.png" alt="Head and Shoulders" class="menu-card-img">
-      <h3 class="menu-card-title">- Head and Shoulders -</h3>
-      <p class="menu-card-price">IDR 25K </p>
-  </div>
-  
       </div>
+
+      <div class="menu-card">
+        <img src="img/belanja/4.png" alt="Aqua Galon (New)" class="menu-card-img">
+        <h3 class="menu-card-title">- Aqua Galon (New) -</h3>
+        <p class="menu-card-price">IDR 60K </p>
+      </div>
+
+      <div class="menu-card">
+        <img src="img/belanja/9.png" alt="Head and Shoulders" class="menu-card-img">
+        <h3 class="menu-card-title">- Head and Shoulders -</h3>
+        <p class="menu-card-price">IDR 25K </p>
+      </div>
+
+    </div>
   </section>
-  
-    <!-- Menu Section End -->
 
-    <!-- Product Section start -->
-    <section class="products" id="product">
-      <h2><span>Produk</span> Tambahan</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam maxime asperiores dicta ipsum ipsam iste?</p>
+  <!-- Menu Section End -->
 
-      <div class="row">
+  <!-- Product Section start -->
+  <section class="products" id="products" x-data="products">
+    <h2><span>Produk</span> Spesial</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam maxime asperiores dicta ipsum ipsam iste?</p>
+
+    <div class="row">
+      <template x-for="(item, index) in items" x-key="index">
         <div class="product-card">
           <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+            <a href="#">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <use href="img/feather-sprite.svg#circle" />
+              </svg>
+            </a>
+            <a href="#" class="item-detail-button">
+              <svg width="24" height="24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <use href="img/feather-sprite.svg#circle" />
+              </svg>
+            </a>
           </div>
           <div class="product-image">
-            <img src="img/products/1.jpg" alt="Product 1">
+            <img :src="`img/products/${item.img}`" :alt="item.name">
           </div>
           <div class="product-content">
-            <h3>Senyuman Mas Susilo</h3>
+            <h3 x-text="item.name"></h3>
             <div class="product-stars">
               <i data-feather="star"></i>
               <i data-feather="star"></i>
@@ -184,135 +203,101 @@
               <i data-feather="star"></i>
               <i data-feather="star"></i>
             </div>
-            <div class="product-price">IDR 1000K <span>IDR 750K</span></div>
+            <div class="product-price"><span x-text="item.price"></span></div>
           </div>
         </div>
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="img/products/1.jpg" alt="Product 1">
-          </div>
-          <div class="product-content">
-            <h3>Senyuman Mas Susilo</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star"></i>
-            </div>
-            <div class="product-price">IDR 1000K <span>IDR 750K</span></div>
-          </div>
+      </template>
+    </div>
+  </section>
+  <!-- Product Section end -->
+
+  <!-- Contact Section Start -->
+  <section id="contact" class="contact">
+    <h2><span>Kontak</span> Kami</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, nemo.</p>
+
+    <div class="row">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d698.7729172678339!2d110.32406840120244!3d-7.80500741693857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af7ffe9803f79%3A0x30f2209972a81a58!2sUniversitas%20Jenderal%20Achmad%20Yani%20Yogyakarta%20(Kampus%202)!5e0!3m2!1sid!2sid!4v1699926476510!5m2!1sid!2sid"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+      <form action="">
+        <div class="input-group">
+          <i data-feather="user"></i>
+          <input type="text" placeholder="nama">
         </div>
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="img/products/1.jpg" alt="Product 1">
-          </div>
-          <div class="product-content">
-            <h3>Senyuman Mas Susilo</h3>
-            <div class="product-stars">
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-            </div>
-            <div class="product-price">IDR 1000K <span>IDR 750K</span></div>
-          </div>
+        <div class="input-group">
+          <i data-feather="mail"></i>
+          <input type="text" placeholder="email">
         </div>
-      </div>
-    </section>
-    <!-- Product Section end -->
+        <div class="input-group">
+          <i data-feather="phone"></i>
+          <input type="text" placeholder="no hp">
+        </div>
+        <button type="submit" class="btn">Kirim Pesan</button>
+      </form>
+    </div>
 
-    <!-- Contact Section Start -->
-    <section id="contact" class="contact">
-      <h2><span>Kontak</span> Kami</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, nemo.</p>
+  </section>
+  <!-- Contact Section End -->
 
-      <div class="row">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d698.7729172678339!2d110.32406840120244!3d-7.80500741693857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af7ffe9803f79%3A0x30f2209972a81a58!2sUniversitas%20Jenderal%20Achmad%20Yani%20Yogyakarta%20(Kampus%202)!5e0!3m2!1sid!2sid!4v1699926476510!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+  <!-- Footer start -->
+  <footer>
+    <div class="socials">
+      <a href=""><i data-feather="instagram"></i></a>
+      <a href=""><i data-feather="twitter"></i></a>
+      <a href=""><i data-feather="facebook"></i></a>
+    </div>
 
-        <form action="">
-          <div class="input-group">
-            <i data-feather="user"></i>
-            <input type="text" placeholder="nama">
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang Kami</a>
+      <a href="#menu">Promo</a>
+      <a href="#products">Produk</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="credit">
+      <p>Created by <a href="">Kelompok VI</a>. | &copy; 2023.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+
+  <!-- Modal Box Item Detail start -->
+  <div class="modal" id="item-detail-modal">
+    <div class="modal-container">
+      <a href="#" class="close-icon"><i data-feather="x"></i></a>
+      <div class="modal-content">
+        <img src="img/products/1.jpg" alt="Senyuman Mas Susilo">
+        <div class="product-content">
+          <h3>Senyuman Mas Susilo</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, sint perferendis laudantium temporibus vero
+            facilis harum obcaecati velit alias voluptatum reiciendis nostrum nulla aperiam minus.</p>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
           </div>
-          <div class="input-group">
-            <i data-feather="mail"></i>
-            <input type="text" placeholder="email">
-          </div>
-          <div class="input-group">
-            <i data-feather="phone"></i>
-            <input type="text" placeholder="no hp">
-          </div>
-          <button type="submit" class="btn">Kirim Pesan</button>
-        </form>
-      </div>
-
-    </section>
-    <!-- Contact Section End -->
-
-    <!-- Footer start -->
-    <footer>
-      <div class="socials">
-        <a href=""><i data-feather="instagram"></i></a>
-        <a href=""><i data-feather="twitter"></i></a>
-        <a href=""><i data-feather="facebook"></i></a>
-      </div>
-
-      <div class="links">
-        <a href="#home">Home</a>
-        <a href="#about">Tentang Kami</a>
-        <a href="#menu">Menu</a>
-        <a href="#contact">Kontak</a>
-      </div>
-
-      <div class="credit">
-        <p>Created by <a href="">Kelompok VI</a>. | &copy; 2023.</p>
-      </div>
-    </footer>
-    <!-- Footer end -->
-
-
-    <!-- Modal Box Item Detail start -->
-    <div class="modal" id="item-detail-modal">
-      <div class="modal-container">
-        <a href="#" class="close-icon"><i data-feather="x"></i></a>
-        <div class="modal-content">
-          <img src="img/products/1.jpg" alt="Senyuman Mas Susilo">
-          <div class="product-content">
-            <h3>Senyuman Mas Susilo</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, sint perferendis laudantium temporibus vero facilis harum obcaecati velit alias voluptatum reiciendis nostrum nulla aperiam minus.</p>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star"></i>
-            </div>
-            <div class="product-price">IDR 1000K <span>IDR 750K</span></div>
-            <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
-          </div>
+          <div class="product-price">IDR 1000K <span>IDR 750K</span></div>
+          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
         </div>
       </div>
     </div>
-    <!-- Modal Box Item Detail end -->
+  </div>
+  <!-- Modal Box Item Detail end -->
 
 
-    <!-- Feather Icons -->
-    <script>
-      feather.replace();
-    </script>
+  <!-- Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
 
-    <!-- Javasript -->
-    <script src="js/script.js"></script>
-  </body>
+  <!-- Javasript -->
+  <script src="js/script.js"></script>
+</body>
+
 </html>
 <fi

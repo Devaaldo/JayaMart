@@ -303,10 +303,24 @@ body {
 .contact p,
 .products p {
   text-align: center;
-  max-width: 30rem;
+  max-width: 60rem;
   margin: auto;
   font-weight: 100;
   line-height: 1.6;
+  font-size: 1.5rem;
+}
+
+.menu p span {
+  color: var(--primary);
+}
+
+.menu h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.menu h3 span {
+  color: var(--primary);
 }
 
 .menu .row {
