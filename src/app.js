@@ -26,6 +26,7 @@ document.addEventListener("alpine:init", () => {
       } else {
         // jika barang sudah ada, cek apakah barang beda atau sama dengan yang ada di cart
         this.items = this.items.map((item) => {
+          // jika barang berbeda
           if (item.id !== newItem.id) {
             return item;
           } else {
@@ -33,7 +34,7 @@ document.addEventListener("alpine:init", () => {
             item.quantity++;
             item.total = item.price * item.quantity;
             this.quantity++;
-            this.total += newItem.price;
+            this.total += item.price;
             return item;
           }
         });
@@ -46,7 +47,7 @@ document.addEventListener("alpine:init", () => {
       // jika item lebih dari 1
       if (cartItem.quantity > 1) {
         // telusuri 1 1
-        this.item = this.items.map((item) => {
+        this.items = this.items.map((item) => {
           // jika bukan barang yang diklik
           if (item.id !== id) {
             return item;
@@ -58,6 +59,11 @@ document.addEventListener("alpine:init", () => {
             return item;
           }
         });
+      } else if (cartItem.quantity === 1) {
+        // jika barangnya sisa 1
+        this.items = this.items.filter((item) => item.id !== id);
+        this.quantity--;
+        this.total -= cartItem.price;
       }
     },
   });
