@@ -11,7 +11,7 @@ document.addEventListener("alpine:init", () => {
         img: "5.jpg",
         price: 7500000,
       },
-      { id: 6, name: "Kasih Sayang Mas Johan", img: "6.jpg", price: 1000 },
+      { id: 6, name: "Kasih Sayang Mas Johan", img: "6.jpg", price: 100000 },
     ],
   }));
 
