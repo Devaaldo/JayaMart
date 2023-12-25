@@ -93,6 +93,30 @@ form.addEventListener("keyup", function () {
   checkoutButton.classList.remove("disabled");
 });
 
+// kirim data ketika tombol checkout diklik
+checkoutButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const data = new URLSearchParams(formData);
+  const objData = Object.fromEntries(data);
+  const message = formatMessage(objData);
+  window.open("http://wa.me/6287781794439?text=" + encodeURIComponent(message));
+});
+
+// format pesan whatsapp
+const formatMessage = (obj) => {
+  return `Data Customer
+    Nama: ${obj.name}
+    Email: ${obj.email}
+    No HP: ${obj.phone}
+Data Pesanan
+  ${JSON.parse(obj.items).map(
+    (item) => `${item.name} (${item.quantity} x ${rupiah(item.total)}) \n`
+  )}
+TOTAL: ${rupiah(obj.total)}
+Terima Kasih.`;
+};
+
 // Konversi ke Rupiah
 const rupiah = (number) => {
   return new Intl.NumberFormat("id-ID", {
