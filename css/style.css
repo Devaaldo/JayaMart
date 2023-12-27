@@ -128,7 +128,7 @@ body {
 #shopping-cart-button .quantity-badge {
   display: inline-block;
   padding: 1px 5px;
-  background-color: red;
+  background-color: var(--primary);
   border-radius: 6px;
   font-size: 0.8rem;
   position: absolute;
@@ -388,7 +388,7 @@ body {
 }
 
 .menu p span {
-  color: var(--primary);
+  color: floralwhite;
 }
 
 .menu h3 {
